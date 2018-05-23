@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         padding: 10,
         height: 60,
         justifyContent: 'center',
-        borderRadius: 4,
+        borderRadius: 5,
         backgroundColor: buttonPrimary
     },
     buttonText: {
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         borderWidth: 1,
         borderColor: lightGray,
-        borderRadius: 4
+        borderRadius: 5
     },
 })
 export default connect()(NewDeck)

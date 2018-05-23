@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         padding: 10,
         height: 60,
         justifyContent: 'center',
-        borderRadius: 4,
+        borderRadius: 5,
         backgroundColor: buttonPrimary
     },
     buttonText: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         borderWidth: 1,
         borderColor: lightGray,
-        borderRadius: 4
+        borderRadius: 5
     },
     answer: {
         marginTop: 10,
@@ -89,9 +89,9 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         paddingBottom: 5,
         borderWidth: 1,
-        borderRadius: 4,
+        borderRadius: 5,
         borderColor: lightGray,
-        height: 70
+        height: 80
     }
 })
 export default connect()(AddCard)

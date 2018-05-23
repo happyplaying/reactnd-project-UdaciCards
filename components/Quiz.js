@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
         height: 45,
         margin: 10,
         justifyContent: 'center',
-        borderRadius: 7
+        borderRadius: 5
     },
     buttonText: {
         color: white,
