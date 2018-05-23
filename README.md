@@ -27,7 +27,7 @@ Then, go to project folder using:
 ## To install and run 
 
 ```
->  npm install
+> npm install
 ```
 
 This should run for some minutes. When it finishes, type:
