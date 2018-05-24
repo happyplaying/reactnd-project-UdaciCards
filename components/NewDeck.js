@@ -21,7 +21,7 @@ class NewDeck extends Component {
                         questions:[],
                     }
                 }))
-                this.props.navigation.navigate('Decks')
+                this.props.navigation.navigate('DeckDetails', {deckTitle: deckTitle})
             })
         }
     }

@@ -2,11 +2,15 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { View, Text, StyleSheet, Platform, TouchableOpacity } from 'react-native'
 import {white, black, buttonFailure, buttonSuccess, red, green, charcoal, buttonPrimary} from '../utils/colors'
+import {setLocalNotification, clearLocalNotification} from '../utils/helpers'
 class Quiz extends Component {
     state = {
         index:0,
         count:0,
         answerFlag:false,
+    }
+    componentDidMount() {
+        clearLocalNotification().then(setLocalNotification)
     }
     showAnswerOrQuestion(answerFlag){
        this.setState({ answerFlag})
@@ -30,7 +34,8 @@ class Quiz extends Component {
                 answerFlag : false
             }))
         }else if(type === 'back'){
-            this.props.navigation.navigate('Decks')
+            const {deckTitle} = this.props.navigation.state.params;
+            this.props.navigation.navigate('DeckDetails', {deckTitle: deckTitle})
         }
     }
     render() {
@@ -48,7 +53,7 @@ class Quiz extends Component {
                     
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity style={[styles.button, styles.buttonPrimary]} onPress={() => this.handleButtonClick('back')}>
-                            <Text style={[styles.buttonText]}>Back to home</Text>
+                            <Text style={[styles.buttonText]}>Back to deck</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={[styles.button, styles.buttonFailure]} onPress={() => this.handleButtonClick('reset')}>
                             <Text style={[styles.buttonText]}>Reset the quiz</Text>

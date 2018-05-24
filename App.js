@@ -11,6 +11,7 @@ import { Constants } from 'expo'
 import DeckDetails from './components/DeckDetails'
 import AddCard from './components/AddCard'
 import Quiz from './components/Quiz'
+import { setLocalNotification } from './utils/helpers'
 
 const Tabs = createMaterialTopTabNavigator({
     Decks: {
@@ -85,6 +86,9 @@ const MainNavigator = createStackNavigator({
 })
 
 export default class App extends React.Component {
+    componentDidMount() {
+        setLocalNotification()
+    }
     render() {
         return (
             <Provider store={createStore(reducer)}>
